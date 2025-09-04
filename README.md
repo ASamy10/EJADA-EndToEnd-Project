@@ -31,17 +31,6 @@ The project was delivered in **two phases**:
 
 ---
 
-## 🖼️ Screenshots  
-
-### SSIS Pipeline
-![SSIS Pipeline](<img width="948" height="393" alt="image" src="https://github.com/user-attachments/assets/228270c8-51e4-4406-940c-e0433ece3ebb" />
-)
-
-### Power BI Dashboard
-![Power BI Dashboard](<img width="813" height="491" alt="image" src="https://github.com/user-attachments/assets/a0dba408-c38e-4d91-a526-f1e1620024cc" />)
-
----
-
 ## ✨ Outcomes  
 
 ### 🔹 Phase 1 – Data Engineering (SSIS + SQL Server)  
@@ -77,4 +66,5 @@ The project was delivered in **two phases**:
 
 ## 📎 License  
 This project is shared under the **MIT License** – feel free to use it for learning and reference purposes.  
+
 
