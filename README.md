@@ -27,7 +27,6 @@ The project was delivered in **two phases**:
 - `PowerBI/` → `.pbix` dashboard file.  
 - `Presentation/` → Project presentation slides.  
 - `Videos/` → Demo & walkthrough recordings.  
-- `Images/` → Screenshots for dashboard and pipeline (add your screenshots here).  
 
 ---
 
