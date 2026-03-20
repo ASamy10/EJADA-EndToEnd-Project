@@ -81,18 +81,18 @@ GO
 --------------------------------------------------------------------------------------------------
 
 CREATE TABLE [dbo].[DimDate](
-    [DateKey] [int] PRIMARY KEY NOT NULL,
-    [FullDateAlternateKey] [date] NOT NULL,
-    [DayNumberOfWeek] [tinyint] NOT NULL,
-    [DayNameOfWeek] [nvarchar](10) NOT NULL,
-    [DayNumberOfMonth] [tinyint] NOT NULL,
-    [DayNumberOfYear] [smallint] NOT NULL,
-    [WeekNumberOfYear] [tinyint] NOT NULL,
-    [MonthName] [nvarchar](10) NOT NULL,
-    [MonthNumberOfYear] [tinyint] NOT NULL,
-    [CalendarQuarter] [tinyint] NOT NULL,
-    [CalendarYear] [smallint] NOT NULL,
-    [CalendarSemester] [tinyint] NOT NULL
+Â  Â  [DateKey] [int] PRIMARY KEY NOT NULL,
+Â  Â  [FullDateAlternateKey] [date] NOT NULL,
+Â  Â  [DayNumberOfWeek] [tinyint] NOT NULL,
+Â  Â  [DayNameOfWeek] [nvarchar](10) NOT NULL,
+Â  Â  [DayNumberOfMonth] [tinyint] NOT NULL,
+Â  Â  [DayNumberOfYear] [smallint] NOT NULL,
+Â  Â  [WeekNumberOfYear] [tinyint] NOT NULL,
+Â  Â  [MonthName] [nvarchar](10) NOT NULL,
+Â  Â  [MonthNumberOfYear] [tinyint] NOT NULL,
+Â  Â  [CalendarQuarter] [tinyint] NOT NULL,
+Â  Â  [CalendarYear] [smallint] NOT NULL,
+Â  Â  [CalendarSemester] [tinyint] NOT NULL
 )
 GO
 
@@ -117,7 +117,7 @@ CREATE TABLE [Sales].[FactSales](
 	[Quantity] [int] NULL,
 	[Discount] [money] NULL,
 	[LineTotal] [money] NULL,
- CONSTRAINT [PK_FactSales] PRIMARY KEY NONCLUSTERED
+Â CONSTRAINT [PK_FactSales] PRIMARY KEY NONCLUSTERED
 (
 	[SalesOrderID] ASC,
 	[SalesOrderDetailID] ASC
