@@ -1,69 +1,82 @@
-# Ejada End-to-End Data Project  
+# End-to-End Data Warehouse & BI Solution | Ejada Internship
 
-## 📌 Overview  
-This project was developed during my internship with **Ejada**.  
-It demonstrates an **end-to-end data solution** that combines both **Data Engineering** and **Business Intelligence** to transform raw data into decision-ready insights.  
+## 📌 Project Overview
+This project was developed during my internship with **Ejada**. It demonstrates an **end-to-end data solution** that combines both **Data Engineering** and **Business Intelligence** to transform raw transactional data (Adventure Works) into decision-ready insights.
 
-The project was delivered in **two phases**:  
-1. **Phase 1 – Data Engineering:** Building a complete data warehouse pipeline using **SSIS + SQL Server**.  
-2. **Phase 2 – Business Intelligence:** Creating an interactive **Power BI dashboard** for business analysis.  
-
----
-
-## 🛠️ Tech Stack  
-- **SQL Server Integration Services (SSIS)**  
-- **SQL Server / Data Warehouse / OLAP**  
-- **Power BI**  
-- **Star Schema Modeling**  
-- **Clustered Columnstore Indexes**  
-- **SCD Types 0, 1, 2**  
+The project was delivered in **two phases**:
+1. **Phase 1 – Data Engineering:** Building a complete data warehouse pipeline using **SSIS + SQL Server**.
+2. **Phase 2 – Business Intelligence:** Creating an interactive **Power BI dashboard** for business analysis.
 
 ---
 
-## 📂 Repository Contents  
-- `SSIS/` → Integration Services packages (ETL workflows).  
-- `SQL_Scripts/` → SQL queries, stored procedures, transformations.  
-- `OLAP_Backup/` → Cube backup for analysis.  
-- `PowerBI/` → `.pbix` dashboard file.  
-- `Presentation/` → Project presentation slides.  
-- `Videos/` → Demo & walkthrough recordings.  
+## 🛠️ Tech Stack
+* **Database & OLAP:** SQL Server, Data Warehouse, Star Schema Modeling
+* **ETL Tool:** SQL Server Integration Services (SSIS)
+* **BI Tool:** Power BI
+* **Performance & Tracking:** Clustered Columnstore Indexes, SCD Types 0, 1, 2
 
 ---
 
-## ✨ Outcomes  
+## 🏗️ Phase 1: Data Engineering (ETL & DW)
+In this phase, I built a scalable, dynamic, and reusable pipeline to move data from a staging area to a production-ready Data Warehouse, handling initial and incremental loads.
 
-### 🔹 Phase 1 – Data Engineering (SSIS + SQL Server)  
-- 🚀 Achieved **2.5x performance improvement** by shifting analytics from OLTP to OLAP.  
-- 🔄 Built a **dynamic, reusable ETL pipeline** with staging, initial & incremental loads.  
-- 🗂️ Implemented **Slowly Changing Dimensions (Types 0, 1, 2)** for reliable historical tracking.  
-- ⚡ Optimized fact tables using **Clustered Columnstore Indexes** for high-performance queries.  
-- 🏗️ Designed a **scalable, clean pipeline architecture** aligned with enterprise-grade practices.  
-- 🎯 Strengthened expertise in **data warehousing, metadata tracking, and ETL workflows**.  
+### ⚙️ ETL Architecture & Execution
+I designed a multi-stage ETL process including Initialization (Constraints handling), Staging, and Dimension/Fact loading, aligned with enterprise-grade practices.
 
-### 🔹 Phase 2 – Business Intelligence (Power BI Dashboard)  
-- 📊 Built an **interactive sales performance dashboard** for Adventure Works.  
-- 🌍 Integrated **regional maps** and **time filters (2020–2024)** for dynamic exploration.  
-- 🔎 Enabled **drill-through navigation** from Sales → Orders → Customers → Products.  
-- 📈 Delivered **strategic business insights**, including:  
-  - Strong **42.7% profit margin** with $233.8M revenue and $92.9M profit.  
-  - **+30.3% YoY profit growth**, mainly driven by bike sales.  
-  - Identification of **most profitable customer** (Plastic Parts Company, Canada).  
-  - Seasonal **revenue peaks in January & June**.  
-  - **40% inactive customers**, showing reactivation opportunities.  
-  - **Customer concentration risk** due to dependency on a few top clients.  
-  - **6-day average shipping time** competitive, but room for optimization for high-value customers.  
+![ETL Architecture](docs/ETL%20Architecture.PNG)
+
+### ⚡ Performance Optimization & Outcomes
+* 🚀 Achieved a **2.5x performance improvement** by shifting analytics from OLTP to OLAP and optimizing fact tables using **Clustered Columnstore Indexes**.
+* 🗂️ Implemented **Slowly Changing Dimensions (Types 0, 1, 2)** for reliable historical tracking.
+* 🎯 Strengthened expertise in data warehousing, metadata tracking, and ETL workflows.
+
+<p align="center">
+  <img src="docs/Column-Index.png" width="80%" alt="Column Store Index Diagram" />
+</p>
 
 ---
 
-## 🚀 Future Work  
-- Migrate data warehouse pipeline to **Azure Data Factory** for cloud scalability.  
-- Automate Power BI refresh using **Power BI Service + Gateway**.  
-- Extend analysis with **predictive modeling (ML on sales trends & churn)**.  
-- Improve dashboard storytelling with **advanced DAX measures**.  
+## 📊 Phase 2: Business Intelligence (Power BI)
+I developed an interactive sales performance dashboard suite providing deep-drill capabilities for Sales, Products, and Customers, utilizing regional maps and time filters (2020–2024).
+
+### 📈 Executive Sales Overview & Strategic Insights
+* **Profitability:** Strong **42.7% profit margin** with $233.8M revenue and $92.9M profit.
+* **Growth:** **+30.3% YoY profit growth**, mainly driven by bike sales.
+* **Seasonality:** Identified seasonal revenue peaks in **January & June**.
+
+![Sales Dashboard](docs/Sales.png)
+
+### 🔍 Drill-Through Analysis (Customers & Products)
+Enabled drill-through navigation from Sales → Orders → Customers → Products.
+* **Customer Deep-Dive:** Identified the most profitable customer (Plastic Parts Company, Canada) and a **customer concentration risk**. Found **40% inactive customers**, showing a massive reactivation opportunity.
+* **Shipping Efficiency:** Tracked a **6-day average shipping time** (competitive, but room for optimization for high-value customers).
+
+<p align="center">
+  <img src="docs/Customer.png" width="45%" />
+  <img src="docs/Product.png" width="45%" />
+</p>
+
+### 📦 Order-Specific Analysis
+Detailed view of individual orders including line costs, status tracking, and quantity by product model.
+
+![Order Analysis](docs/Order.PNG)
 
 ---
 
-## 📎 License  
-This project is shared under the **MIT License** – feel free to use it for learning and reference purposes.  
+## 📂 Repository Contents
+* `SSIS/` → Integration Services packages (ETL workflows).
+* `SQL_Scripts/` → SQL queries, stored procedures, transformations.
+* `PowerBI/` → `.pbix` dashboard file.
+* `docs/` → Project presentation slides (`EJADA Presentation.pdf`) and dashboard screenshots.
+* `Social/` → Links to project demonstrations and LinkedIn posts.
 
+---
 
+## 🚀 Future Work
+* Migrate data warehouse pipeline to **Azure Data Factory** for cloud scalability.
+* Automate Power BI refresh using **Power BI Service + Gateway**.
+* Extend analysis with **predictive modeling** (ML on sales trends & churn).
+* Improve dashboard storytelling with **advanced DAX measures**.
+
+---
+MIT License | Developed by **Ahmed Samy** (Ejada Internship 2025)
